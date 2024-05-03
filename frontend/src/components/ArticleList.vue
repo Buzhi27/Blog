@@ -190,11 +190,7 @@ const info = ref('');
 // 创建路由
 const route = useRoute();
 
-// 用以判断当前请求是否重复。若确认是重复请求，则立即中断此请求。
-// 新增响应式对象
-const kwargs = ref({ page: 0, searchText: '' });
-// 修改方法，把此对象作为第三个参数
-getArticleData(info, route, kwargs);
+getArticleData(info, route);
 
 // 翻页
 const { is_page_exists, get_page_param, get_path } = pagination(info, route);
