@@ -2,11 +2,11 @@ module.exports = {
   lintOnSave: false,
   devServer: {
     proxy: {
-      "/api": {
-        target: `http://47.97.196.12/api`,
+      '/api': {
+        target: `http://127.0.0.1:8000/api`,
         changeOrigin: true,
         pathRewrite: {
-          "^/api": "",
+          '^/api': '',
         },
       },
     },
